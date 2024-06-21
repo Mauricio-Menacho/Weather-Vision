@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/logo.png" type="image/png">
+    <title>App del Clima | Mauricio</title>
+</head>
+
+<body>
+
+    <div class="video-fondo">
+        <video id="background-video" autoplay muted loop class="fondo"></video>
+    </div>
+
+    <div class="contenedor">
+        <div class="info-izquierda">
+            <div class="gradiente-imagen"></div>
+            <div class="info-hoy">
+                <h2>Viernes</h2>
+                <span>28 de Julio de 2023</span>
+                <div>
+                    <i class='bx bx-current-location'></i>
+                    <span>París, FR</span>
+                </div>
+            </div>
+            <div class="clima-hoy">
+                <i class='bx bx-sun'></i>
+                <h1 class="temperatura">
+                    25°C
+                </h1>
+                <h3>Soleado</h3>
+            </div>
+        </div>
+
+        <div class="info-derecha">
+            <div class="info-dia">
+                <div>
+                    <span class="titulo">PRECIPITACIÓN</span>
+                    <span class="valor">4 %</span>
+                </div>
+                <div>
+                    <span class="titulo">HUMEDAD</span>
+                    <span class="valor">34 %</span>
+                </div>
+                <div>
+                    <span class="titulo">VEL. DEL VIENTO</span>
+                    <span class="valor">6 km/h</span>
+                </div>
+            </div>
+
+            <ul class="lista-dias">
+                <li>
+                    <i class='bx bx-cloud'></i>
+                    <span>Dom</span>
+                    <span class="temperatura-dia">23°C</span>
+                </li>
+                <li>
+                    <i class='bx bx-sun'></i>
+                    <span>Lun</span>
+                    <span class="temperatura-dia">28°C</span>
+                </li>
+                <li>
+                    <i class='bx bx-cloud-rain'></i>
+                    <span>Mar</span>
+                    <span class="temperatura-dia">02°C</span>
+                </li>
+                <li>
+                    <i class='bx bx-cloud-drizzle'></i>
+                    <span>Mié</span>
+                    <span class="temperatura-dia">14°C</span>
+                </li>
+            </ul>
+
+            <div class="contenedor-btn">
+                <button class="btn-ubicacion">Buscar ubicación</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

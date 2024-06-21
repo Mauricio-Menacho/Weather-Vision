@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #37474f;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.contenedor {
+    height: 510px;
+    background-color: rgba(35, 41, 49, 0.85); /* Fondo ligeramente transparente */
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.info-izquierda{
+    width: 350px;
+    height: 100%;
+    float: left;
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.03) perspective(200px);
+    cursor: pointer;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.info-izquierda:hover{
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+}
+
+.gradiente-imagen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #5c6bc0 10%, #ced1ff 100%);
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.info-hoy{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 19px;
+    left: 11px;
+    padding: 16px;
+    font-size: x-large;
+}
+
+.clima-hoy{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: x-large;
+    bottom: 27px;
+    left: 28px;
+}
+
+.clima-hoy .bx{
+    font-size: 4.6rem;
+}
+
+.temperatura{
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.info-derecha{
+    float: right;
+    position: relative;
+    height: 100%;
+    width: 450px;
+    padding-top: 25px;
+}
+
+.info-dia{
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-dia div:not(:last-child){
+    margin-bottom: 6px;
+    font-size: x-large;
+}
+
+.info-dia div .titulo{
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.info-dia div .valor{
+    float: right;
+    font-size: x-large;
+}
+
+.lista-dias{
+    display: flex;
+    list-style: none;
+    margin: 27px 56px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+.lista-dias li{
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: x-large;
+}
+
+.lista-dias li .bx{
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.lista-dias li:hover{
+    transform: scale(1.1);
+    background: #fff;
+    color: #222831;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.lista-dias li .temperatura-dia{
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+.contenedor-btn{
+    padding: 23px 35px;
+}
+
+.btn-ubicacion{
+    outline: none;
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 10px;
+    background: #1d2b5c;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+    font-size: x-large;
+}
+
+.btn-ubicacion:hover{
+    background: #2f4669;
+}
+
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .info-izquierda, .info-derecha {
+        width: 100%;
+        max-width: none;
+        background-color: rgba(35, 41, 49, 0.85);
+        border-radius: 30px
+    }
+
+    .lista-dias li {
+        width: 100%; /* Una columna en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+}
